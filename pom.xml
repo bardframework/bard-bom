@@ -71,6 +71,11 @@
             </dependency>
             <dependency>
                 <groupId>org.bardframework.commons</groupId>
+                <artifactId>common-monitoring</artifactId>
+                <version>${bardframework.commons.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bardframework.commons</groupId>
                 <artifactId>common-redis</artifactId>
                 <version>${bardframework.commons.version}</version>
             </dependency>
