@@ -12,7 +12,7 @@
 
     <groupId>org.bardframework</groupId>
     <artifactId>bard-bom</artifactId>
-    <version>1.5.25</version>
+    <version>1.6.5</version>
 
     <packaging>pom</packaging>
     <name>Bard Framework BOM (Bill of Materials)</name>
@@ -20,11 +20,11 @@
 
     <properties>
         <!-- versions -->
-        <bardframework.commons.version>1.5.26</bardframework.commons.version>
-        <bardframework.crud.version>1.5.27</bardframework.crud.version>
-        <bardframework.filestore.version>1.5.28</bardframework.filestore.version>
-        <bardframework.form.version>1.5.29</bardframework.form.version>
-        <bardframework.validator.version>1.5.30</bardframework.validator.version>
+        <bardframework.commons.version>1.6.6</bardframework.commons.version>
+        <bardframework.crud.version>1.6.7</bardframework.crud.version>
+        <bardframework.filestore.version>1.6.8</bardframework.filestore.version>
+        <bardframework.form.version>1.6.9</bardframework.form.version>
+        <bardframework.validator.version>1.6.10</bardframework.validator.version>
         <jalali-date.version>1.4.3</jalali-date.version>
         <!---->
         <commons-collections4.version>4.4</commons-collections4.version>
