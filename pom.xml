@@ -25,7 +25,7 @@
         <bardframework.filestore.version>1.7.3</bardframework.filestore.version>
         <bardframework.form.version>1.7.4</bardframework.form.version>
         <bardframework.validator.version>1.7.5</bardframework.validator.version>
-        <jalali-date.version>1.7.6</jalali-date.version>
+        <jalali-date.version>1.4.6</jalali-date.version>
         <!---->
         <commons-collections4.version>4.4</commons-collections4.version>
         <commons-io.version>2.11.0</commons-io.version>
