@@ -6,13 +6,13 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-dependencies</artifactId>
-        <version>2.7.3</version>
+        <version>2.7.4</version>
         <relativePath/>
     </parent>
 
     <groupId>org.bardframework</groupId>
     <artifactId>bard-bom</artifactId>
-    <version>1.6.15</version>
+    <version>1.7.10</version>
 
     <packaging>pom</packaging>
     <name>Bard Framework BOM (Bill of Materials)</name>
@@ -20,30 +20,33 @@
 
     <properties>
         <!-- versions -->
-        <bardframework.commons.version>1.6.16</bardframework.commons.version>
-        <bardframework.crud.version>1.6.17</bardframework.crud.version>
-        <bardframework.filestore.version>1.6.18</bardframework.filestore.version>
-        <bardframework.form.version>1.6.19</bardframework.form.version>
-        <bardframework.validator.version>1.6.20</bardframework.validator.version>
-        <jalali-date.version>1.4.3</jalali-date.version>
+        <bardframework.commons.version>1.7.1</bardframework.commons.version>
+        <bardframework.crud.version>1.7.2</bardframework.crud.version>
+        <bardframework.filestore.version>1.7.3</bardframework.filestore.version>
+        <bardframework.form.version>1.7.4</bardframework.form.version>
+        <bardframework.validator.version>1.7.5</bardframework.validator.version>
+        <jalali-date.version>1.7.6</jalali-date.version>
         <!---->
         <commons-collections4.version>4.4</commons-collections4.version>
         <commons-io.version>2.11.0</commons-io.version>
-        <commons-text.version>1.9</commons-text.version>
+        <commons-text.version>1.10.0</commons-text.version>
+        <!-- Deprecated -->
         <guava.version>31.1-jre</guava.version>
+        <!-- Deprecated -->
         <generex.version>1.0.2</generex.version>
-        <libphonenumber.version>8.12.54</libphonenumber.version>
-        <poi.version>5.2.2</poi.version>
+        <libphonenumber.version>8.12.56</libphonenumber.version>
+        <poi.version>5.2.3</poi.version>
         <reflection.version>0.10.2</reflection.version>
-        <springdoc.version>1.6.10</springdoc.version>
-        <tika.version>2.4.1</tika.version>
-        <yauaa.version>7.4.0</yauaa.version>
+        <springdoc.version>1.6.11</springdoc.version>
+        <tika.version>2.5.0</tika.version>
+        <yauaa.version>7.6.0</yauaa.version>
         <zxing.version>3.5.0</zxing.version>
         <!-- plugin versions -->
         <sonar-maven-plugin.version>3.9.1.2184</sonar-maven-plugin.version>
+        <!-- Deprecated -->
         <dockerfile-maven-plugin.version>1.4.13</dockerfile-maven-plugin.version>
         <jacoco-maven-plugin.version>0.8.8</jacoco-maven-plugin.version>
-        <properties-maven-plugin.version>1.0.0</properties-maven-plugin.version>
+        <properties-maven-plugin.version>1.1.0</properties-maven-plugin.version>
         <nexus-staging-maven-plugin.vesion>1.6.13</nexus-staging-maven-plugin.vesion>
         <maven-gpg-plugin.version>3.0.1</maven-gpg-plugin.version>
         <!-- variables -->
