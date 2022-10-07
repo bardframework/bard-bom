@@ -346,9 +346,28 @@
                         </execution>
                     </executions>
                     <configuration>
+                        <excludes>
+                            <exclude>develop-configuration/**</exclude>
+                            <exclude>unused/**</exclude>
+                            <exclude>*.xml</exclude>
+                        </excludes>
                         <skipIfEmpty>true</skipIfEmpty>
                     </configuration>
                 </plugin>
+
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-war-plugin</artifactId>
+                    <version>${maven-war-plugin.version}</version>
+                    <configuration>
+                        <packagingExcludes>
+                            WEB-INF/classes/develop-configuration/**,
+                            WEB-INF/classes/unused/**,
+                            WEB-INF/classes/**.xml,
+                        </packagingExcludes>
+                    </configuration>
+                </plugin>
+
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-source-plugin</artifactId>
@@ -362,6 +381,7 @@
                         </execution>
                     </executions>
                 </plugin>
+
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-javadoc-plugin</artifactId>
@@ -375,16 +395,19 @@
                         </execution>
                     </executions>
                 </plugin>
+
                 <plugin>
                     <groupId>org.codehaus.mojo</groupId>
                     <artifactId>properties-maven-plugin</artifactId>
                     <version>${properties-maven-plugin.version}</version>
                 </plugin>
+
                 <plugin>
                     <groupId>com.querydsl</groupId>
                     <artifactId>querydsl-maven-plugin</artifactId>
                     <version>${querydsl.version}</version>
                 </plugin>
+
                 <plugin>
                     <groupId>com.spotify</groupId>
                     <artifactId>dockerfile-maven-plugin</artifactId>
@@ -399,16 +422,19 @@
                         </buildArgs>
                     </configuration>
                 </plugin>
+
                 <plugin>
                     <groupId>org.sonarsource.scanner.maven</groupId>
                     <artifactId>sonar-maven-plugin</artifactId>
                     <version>${sonar-maven-plugin.version}</version>
                 </plugin>
+
                 <plugin>
                     <groupId>org.jacoco</groupId>
                     <artifactId>jacoco-maven-plugin</artifactId>
                     <version>${jacoco-maven-plugin.version}</version>
                 </plugin>
+
                 <plugin>
                     <groupId>org.springframework.boot</groupId>
                     <artifactId>spring-boot-maven-plugin</artifactId>
@@ -418,10 +444,33 @@
                     <executions>
                         <execution>
                             <goals>
+                                <goal>build-info</goal>
                                 <goal>repackage</goal>
                             </goals>
                         </execution>
                     </executions>
+                </plugin>
+
+                <plugin>
+                    <groupId>pl.project13.maven</groupId>
+                    <artifactId>git-commit-id-plugin</artifactId>
+                    <executions>
+                        <execution>
+                            <id>get-the-git-infos</id>
+                            <goals>
+                                <goal>revision</goal>
+                            </goals>
+                            <phase>initialize</phase>
+                        </execution>
+                    </executions>
+                    <configuration>
+                        <generateGitPropertiesFile>true</generateGitPropertiesFile>
+                        <includeOnlyProperties>
+                            <includeOnlyProperty>^git.branch$</includeOnlyProperty>
+                            <includeOnlyProperty>^git.commit.id.(abbrev|full)$</includeOnlyProperty>
+                        </includeOnlyProperties>
+                        <commitIdGenerationMode>full</commitIdGenerationMode>
+                    </configuration>
                 </plugin>
             </plugins>
         </pluginManagement>
