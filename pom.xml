@@ -6,13 +6,13 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-dependencies</artifactId>
-        <version>2.7.4</version>
+        <version>3.0.0</version>
         <relativePath/>
     </parent>
 
     <groupId>org.bardframework</groupId>
     <artifactId>bard-bom</artifactId>
-    <version>1.7.10</version>
+    <version>1.9.10</version>
 
     <packaging>pom</packaging>
     <name>Bard Framework BOM (Bill of Materials)</name>
@@ -20,27 +20,25 @@
 
     <properties>
         <!-- versions -->
-        <bardframework.commons.version>1.7.1</bardframework.commons.version>
-        <bardframework.crud.version>1.7.2</bardframework.crud.version>
-        <bardframework.filestore.version>1.7.3</bardframework.filestore.version>
-        <bardframework.form.version>1.7.4</bardframework.form.version>
-        <bardframework.validator.version>1.7.5</bardframework.validator.version>
-        <jalali-date.version>1.7.6</jalali-date.version>
+        <bardframework.commons.version>1.9.1</bardframework.commons.version>
+        <bardframework.crud.version>1.9.2</bardframework.crud.version>
+        <bardframework.filestore.version>1.9.3</bardframework.filestore.version>
+        <bardframework.form.version>1.9.4</bardframework.form.version>
+        <bardframework.validator.version>1.9.5</bardframework.validator.version>
+        <jalali-date.version>1.9.6</jalali-date.version>
         <!---->
         <commons-collections4.version>4.4</commons-collections4.version>
         <commons-io.version>2.11.0</commons-io.version>
         <commons-text.version>1.10.0</commons-text.version>
         <!-- Deprecated -->
-        <guava.version>31.1-jre</guava.version>
-        <!-- Deprecated -->
         <generex.version>1.0.2</generex.version>
-        <libphonenumber.version>8.12.56</libphonenumber.version>
+        <libphonenumber.version>8.13.0</libphonenumber.version>
         <poi.version>5.2.3</poi.version>
         <reflection.version>0.10.2</reflection.version>
-        <springdoc.version>1.6.11</springdoc.version>
-        <tika.version>2.5.0</tika.version>
-        <yauaa.version>7.6.0</yauaa.version>
-        <zxing.version>3.5.0</zxing.version>
+        <springdoc.version>1.6.13</springdoc.version>
+        <tika.version>2.6.0</tika.version>
+        <yauaa.version>7.8.0</yauaa.version>
+        <zxing.version>3.5.1</zxing.version>
         <!-- plugin versions -->
         <sonar-maven-plugin.version>3.9.1.2184</sonar-maven-plugin.version>
         <!-- Deprecated -->
@@ -50,7 +48,7 @@
         <nexus-staging-maven-plugin.vesion>1.6.13</nexus-staging-maven-plugin.vesion>
         <maven-gpg-plugin.version>3.0.1</maven-gpg-plugin.version>
         <!-- variables -->
-        <maven.compiler.release>11</maven.compiler.release>
+        <maven.compiler.release>17</maven.compiler.release>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     </properties>
@@ -262,11 +260,6 @@
                 <groupId>org.reflections</groupId>
                 <artifactId>reflections</artifactId>
                 <version>${reflection.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.google.guava</groupId>
-                <artifactId>guava</artifactId>
-                <version>${guava.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.springdoc</groupId>
