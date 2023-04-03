@@ -6,7 +6,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-dependencies</artifactId>
-        <version>3.0.4</version>
+        <version>3.0.5</version>
         <relativePath/>
     </parent>
 
@@ -32,12 +32,12 @@
         <commons-text.version>1.10.0</commons-text.version>
         <!-- Deprecated -->
         <generex.version>1.0.2</generex.version>
-        <libphonenumber.version>8.13.8</libphonenumber.version>
+        <libphonenumber.version>8.13.9</libphonenumber.version>
         <poi.version>5.2.3</poi.version>
         <reflection.version>0.10.2</reflection.version>
         <springdoc.version>2.0.4</springdoc.version>
         <tika.version>2.7.0</tika.version>
-        <yauaa.version>7.16.0</yauaa.version>
+        <yauaa.version>7.17.1</yauaa.version>
         <zxing.version>3.5.1</zxing.version>
         <!-- plugin versions -->
         <sonar-maven-plugin.version>3.9.1.2184</sonar-maven-plugin.version>
