@@ -6,7 +6,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-dependencies</artifactId>
-        <version>3.1.0</version>
+        <version>3.1.1</version>
         <relativePath/>
     </parent>
 
@@ -28,16 +28,16 @@
         <jalali-date.version>2.3.17</jalali-date.version>
         <!---->
         <commons-collections4.version>4.4</commons-collections4.version>
-        <commons-io.version>2.12.0</commons-io.version>
+        <commons-io.version>2.13.0</commons-io.version>
         <commons-text.version>1.10.0</commons-text.version>
         <!-- Deprecated -->
         <generex.version>1.0.2</generex.version>
-        <libphonenumber.version>8.13.12</libphonenumber.version>
+        <libphonenumber.version>8.13.15</libphonenumber.version>
         <poi.version>5.2.3</poi.version>
         <reflection.version>0.10.2</reflection.version>
-        <springdoc.version>2.1.0</springdoc.version>
+        <springdoc-openapi-starter-webmvc-ui.version>2.1.0</springdoc-openapi-starter-webmvc-ui.version>
         <tika.version>2.8.0</tika.version>
-        <yauaa.version>7.19.2</yauaa.version>
+        <yauaa.version>7.20.0</yauaa.version>
         <zxing.version>3.5.1</zxing.version>
         <!-- plugin versions -->
         <sonar-maven-plugin.version>3.9.1.2184</sonar-maven-plugin.version>
@@ -264,7 +264,7 @@
             <dependency>
                 <groupId>org.springdoc</groupId>
                 <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
-                <version>${springdoc.version}</version>
+                <version>${springdoc-openapi-starter-webmvc-ui.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.github.mifmif</groupId>
