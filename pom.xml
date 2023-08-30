@@ -342,6 +342,7 @@
                         <excludes>
                             <exclude>develop-configuration/**</exclude>
                             <exclude>unused/**</exclude>
+                            <exclude>application.properties</exclude>
                             <exclude>*.xml</exclude>
                         </excludes>
                         <skipIfEmpty>true</skipIfEmpty>
@@ -356,6 +357,7 @@
                         <packagingExcludes>
                             WEB-INF/classes/develop-configuration/**,
                             WEB-INF/classes/unused/**,
+                            WEB-INF/classes/application.properties,
                             WEB-INF/classes/**.xml,
                         </packagingExcludes>
                     </configuration>
