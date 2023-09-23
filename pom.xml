@@ -339,10 +339,13 @@
                         </execution>
                     </executions>
                     <configuration>
+                        <archive>
+                            <addMavenDescriptor>false</addMavenDescriptor>
+                        </archive>
                         <excludes>
                             <exclude>develop-configuration/**</exclude>
                             <exclude>unused/**</exclude>
-                            <exclude>application.properties</exclude>
+                            <exclude>application*.properties</exclude>
                             <exclude>*.xml</exclude>
                         </excludes>
                         <skipIfEmpty>true</skipIfEmpty>
