@@ -360,7 +360,9 @@
                         <packagingExcludes>
                             WEB-INF/classes/develop-configuration/**,
                             WEB-INF/classes/unused/**,
-                            WEB-INF/classes/application.properties,
+                            WEB-INF/classes/application*.properties,
+                            WEB-INF/classes/application*.yaml,
+                            WEB-INF/classes/application*.yml,
                             WEB-INF/classes/**.xml,
                         </packagingExcludes>
                     </configuration>
@@ -375,6 +377,7 @@
                             <id>attach-sources</id>
                             <goals>
                                 <goal>jar-no-fork</goal>
+                                <goal>test-jar-no-fork</goal>
                             </goals>
                         </execution>
                     </executions>
