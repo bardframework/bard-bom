@@ -6,13 +6,13 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-dependencies</artifactId>
-        <version>3.2.1</version>
+        <version>3.2.5</version>
         <relativePath/>
     </parent>
 
     <groupId>org.bardframework</groupId>
     <artifactId>bard-bom</artifactId>
-    <version>2.8.30</version>
+    <version>3.1.30</version>
 
     <packaging>pom</packaging>
     <name>Bard Framework BOM (Bill of Materials)</name>
@@ -20,33 +20,40 @@
 
     <properties>
         <!-- versions -->
-        <bardframework.commons.version>2.8.21</bardframework.commons.version>
-        <bardframework.crud.version>2.8.22</bardframework.crud.version>
-        <bardframework.filestore.version>2.8.23</bardframework.filestore.version>
-        <bardframework.form.version>2.8.24</bardframework.form.version>
-        <bardframework.validator.version>2.8.25</bardframework.validator.version>
-        <jalali-date.version>2.8.27</jalali-date.version>
+        <bardframework.commons.version>3.1.21</bardframework.commons.version>
+        <bardframework.crud.version>3.1.22</bardframework.crud.version>
+        <bardframework.filestore.version>3.1.23</bardframework.filestore.version>
+        <bardframework.form.version>3.1.24</bardframework.form.version>
+        <bardframework.validator.version>3.1.25</bardframework.validator.version>
+        <jalali-date.version>3.1.27</jalali-date.version>
         <!---->
-        <commons-collections4.version>4.4</commons-collections4.version>
-        <commons-io.version>2.15.1</commons-io.version>
-        <commons-text.version>1.11.0</commons-text.version>
+        <commons-collections4.version>4.5.0-M1</commons-collections4.version>
+        <commons-io.version>2.16.1</commons-io.version>
+        <commons-text.version>1.12.0</commons-text.version>
         <!-- Deprecated -->
         <generex.version>1.0.2</generex.version>
-        <libphonenumber.version>8.13.27</libphonenumber.version>
+        <geoip2.version>4.2.0</geoip2.version>
+        <libphonenumber.version>8.13.35</libphonenumber.version>
         <poi.version>5.2.5</poi.version>
         <reflection.version>0.10.2</reflection.version>
         <springdoc-openapi-starter-webmvc-ui.version>2.3.0</springdoc-openapi-starter-webmvc-ui.version>
-        <tika.version>2.9.1</tika.version>
-        <yauaa.version>7.24.0</yauaa.version>
-        <zxing.version>3.5.2</zxing.version>
+        <tika.version>3.0.0-BETA</tika.version>
+        <yauaa.version>7.26.1</yauaa.version>
+        <zxing.version>3.5.3</zxing.version>
+        <apm-agent-attach.version>1.49.0</apm-agent-attach.version>
+        <spring-cloud.version>2023.0.1</spring-cloud.version>
+        <querydsl.version>6.2.1</querydsl.version>
+
         <!-- plugin versions -->
-        <sonar-maven-plugin.version>3.10.0.2594</sonar-maven-plugin.version>
         <!-- Deprecated -->
+        <dependency-check-maven.version>9.1.0</dependency-check-maven.version>
         <dockerfile-maven-plugin.version>1.4.13</dockerfile-maven-plugin.version>
-        <jacoco-maven-plugin.version>0.8.11</jacoco-maven-plugin.version>
-        <properties-maven-plugin.version>1.2.0</properties-maven-plugin.version>
+        <jacoco-maven-plugin.version>0.8.12</jacoco-maven-plugin.version>
+        <maven-gpg-plugin.version>3.2.4</maven-gpg-plugin.version>
+        <maven-site-plugin.version>4.0.0-M13</maven-site-plugin.version>
         <nexus-staging-maven-plugin.vesion>1.6.13</nexus-staging-maven-plugin.vesion>
-        <maven-gpg-plugin.version>3.1.0</maven-gpg-plugin.version>
+        <properties-maven-plugin.version>1.2.1</properties-maven-plugin.version>
+        <sonar-maven-plugin.version>3.11.0.3922</sonar-maven-plugin.version>
         <!-- variables -->
         <maven.compiler.release>17</maven.compiler.release>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -129,6 +136,18 @@
             <dependency>
                 <groupId>org.bardframework.commons</groupId>
                 <artifactId>common-web</artifactId>
+                <version>${bardframework.commons.version}</version>
+                <scope>test</scope>
+                <type>test-jar</type>
+            </dependency>
+            <dependency>
+                <groupId>org.bardframework.commons</groupId>
+                <artifactId>common-apm</artifactId>
+                <version>${bardframework.commons.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bardframework.commons</groupId>
+                <artifactId>common-apm</artifactId>
                 <version>${bardframework.commons.version}</version>
                 <scope>test</scope>
                 <type>test-jar</type>
@@ -242,6 +261,32 @@
             <!--...jalali-date-->
 
             <dependency>
+                <groupId>io.github.openfeign.querydsl</groupId>
+                <artifactId>querydsl-bom</artifactId>
+                <version>${querydsl.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.querydsl</groupId>
+                <artifactId>querydsl-bom</artifactId>
+                <version>5.0.0</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.maxmind.geoip2</groupId>
+                <artifactId>geoip2</artifactId>
+                <version>${geoip2.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-collections4</artifactId>
                 <version>${commons-collections4.version}</version>
@@ -282,7 +327,12 @@
                 <version>${zxing.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.querydsl</groupId>
+                <groupId>co.elastic.apm</groupId>
+                <artifactId>apm-agent-attach</artifactId>
+                <version>${apm-agent-attach.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.github.openfeign.querydsl</groupId>
                 <artifactId>querydsl-sql-codegen</artifactId>
                 <version>${querydsl.version}</version>
                 <exclusions>
@@ -404,7 +454,7 @@
                 </plugin>
 
                 <plugin>
-                    <groupId>com.querydsl</groupId>
+                    <groupId>io.github.openfeign.querydsl</groupId>
                     <artifactId>querydsl-maven-plugin</artifactId>
                     <version>${querydsl.version}</version>
                 </plugin>
@@ -471,6 +521,31 @@
                             <includeOnlyProperty>^git.commit.id.(abbrev|full)$</includeOnlyProperty>
                         </includeOnlyProperties>
                         <commitIdGenerationMode>full</commitIdGenerationMode>
+                    </configuration>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-site-plugin</artifactId>
+                    <version>${maven-site-plugin.version}</version>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>${maven-compiler-plugin.version}</version>
+                    <configuration>
+                        <parameters>true</parameters>
+                    </configuration>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.owasp</groupId>
+                    <artifactId>dependency-check-maven</artifactId>
+                    <version>${dependency-check-maven.version}</version>
+                    <configuration>
+                        <formats>xml,json,csv,html</formats>
+                        <skip>true</skip>
                     </configuration>
                 </plugin>
             </plugins>
