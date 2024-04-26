@@ -36,17 +36,17 @@
         <libphonenumber.version>8.13.35</libphonenumber.version>
         <poi.version>5.2.5</poi.version>
         <reflection.version>0.10.2</reflection.version>
-        <springdoc-openapi-starter-webmvc-ui.version>2.3.0</springdoc-openapi-starter-webmvc-ui.version>
+        <springdoc-openapi-starter-webmvc-ui.version>2.5.0</springdoc-openapi-starter-webmvc-ui.version>
         <tika.version>3.0.0-BETA</tika.version>
         <yauaa.version>7.26.1</yauaa.version>
         <zxing.version>3.5.3</zxing.version>
         <apm-agent-attach.version>1.49.0</apm-agent-attach.version>
-        <spring-cloud.version>2023.0.1</spring-cloud.version>
+        <spring-cloud-dependencies.version>2023.0.1</spring-cloud-dependencies.version>
         <querydsl.version>6.2.1</querydsl.version>
 
         <!-- plugin versions -->
-        <!-- Deprecated -->
         <dependency-check-maven.version>9.1.0</dependency-check-maven.version>
+        <!-- Deprecated -->
         <dockerfile-maven-plugin.version>1.4.13</dockerfile-maven-plugin.version>
         <jacoco-maven-plugin.version>0.8.12</jacoco-maven-plugin.version>
         <maven-gpg-plugin.version>3.2.4</maven-gpg-plugin.version>
@@ -277,7 +277,7 @@
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
-                <version>${spring-cloud.version}</version>
+                <version>${spring-cloud-dependencies.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
