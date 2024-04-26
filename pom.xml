@@ -334,21 +334,6 @@
                 <version>${apm-agent-attach.version}</version>
             </dependency>
             <dependency>
-                <groupId>io.github.openfeign.querydsl</groupId>
-                <artifactId>querydsl-sql-codegen</artifactId>
-                <version>${querydsl.openfeign.version}</version>
-                <exclusions>
-                    <exclusion>
-                        <groupId>javax.validation</groupId>
-                        <artifactId>validation-api</artifactId>
-                    </exclusion>
-                    <exclusion>
-                        <groupId>javax.inject</groupId>
-                        <artifactId>javax.inject</artifactId>
-                    </exclusion>
-                </exclusions>
-            </dependency>
-            <dependency>
                 <groupId>org.apache.poi</groupId>
                 <artifactId>poi</artifactId>
                 <version>${poi.version}</version>
@@ -401,18 +386,66 @@
             </dependency>
             <dependency>
                 <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter-test</artifactId>
+                <artifactId>spring-boot-starter-security</artifactId>
                 <version>${spring-boot-dependencies.version}</version>
-                <scope>test</scope>
                 <exclusions>
-                    <exclusion>
-                        <groupId>commons-logging</groupId>
-                        <artifactId>commons-logging</artifactId>
-                    </exclusion>
                     <exclusion>
                         <groupId>ch.qos.logback</groupId>
                         <artifactId>logback-classic</artifactId>
                     </exclusion>
+                    <exclusion>
+                        <groupId>org.springframework.boot</groupId>
+                        <artifactId>spring-boot-starter-logging</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-web</artifactId>
+                <version>${spring-boot-dependencies.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.springframework.boot</groupId>
+                        <artifactId>spring-boot-starter-logging</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <artifactId>spring-boot-starter-tomcat</artifactId>
+                        <groupId>org.springframework.boot</groupId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-actuator</artifactId>
+                <version>${spring-boot-dependencies.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>ch.qos.logback</groupId>
+                        <artifactId>logback-classic</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.apache.logging.log4j</groupId>
+                        <artifactId>log4j-to-slf4j</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.security</groupId>
+                <artifactId>spring-security-oauth2-client</artifactId>
+                <version>${spring-security.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.ow2.asm</groupId>
+                        <artifactId>asm</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-test</artifactId>
+                <version>${spring-boot-dependencies.version}</version>
+                <scope>test</scope>
+                <exclusions>
                     <exclusion>
                         <groupId>org.ow2.asm</groupId>
                         <artifactId>asm</artifactId>
