@@ -31,18 +31,20 @@
         <commons-io.version>2.16.1</commons-io.version>
         <commons-text.version>1.12.0</commons-text.version>
         <!-- Deprecated -->
+        <apm-agent-attach.version>1.49.0</apm-agent-attach.version>
         <generex.version>1.0.2</generex.version>
         <geoip2.version>4.2.0</geoip2.version>
         <libphonenumber.version>8.13.35</libphonenumber.version>
         <poi.version>5.2.5</poi.version>
+        <querydsl.openfeign.version>6.2.1</querydsl.openfeign.version>
+        <querydsl.version>5.1.0</querydsl.version>
         <reflection.version>0.10.2</reflection.version>
+        <spring-boot-dependencies.version>3.2.5</spring-boot-dependencies.version>
+        <spring-cloud-dependencies.version>2023.0.1</spring-cloud-dependencies.version>
         <springdoc-openapi-starter-webmvc-ui.version>2.5.0</springdoc-openapi-starter-webmvc-ui.version>
         <tika.version>3.0.0-BETA</tika.version>
         <yauaa.version>7.26.1</yauaa.version>
         <zxing.version>3.5.3</zxing.version>
-        <apm-agent-attach.version>1.49.0</apm-agent-attach.version>
-        <spring-cloud-dependencies.version>2023.0.1</spring-cloud-dependencies.version>
-        <querydsl.version>6.2.1</querydsl.version>
 
         <!-- plugin versions -->
         <dependency-check-maven.version>9.1.0</dependency-check-maven.version>
@@ -263,14 +265,14 @@
             <dependency>
                 <groupId>io.github.openfeign.querydsl</groupId>
                 <artifactId>querydsl-bom</artifactId>
-                <version>${querydsl.version}</version>
+                <version>${querydsl.openfeign.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
             <dependency>
                 <groupId>com.querydsl</groupId>
                 <artifactId>querydsl-bom</artifactId>
-                <version>5.0.0</version>
+                <version>${querydsl.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -334,7 +336,7 @@
             <dependency>
                 <groupId>io.github.openfeign.querydsl</groupId>
                 <artifactId>querydsl-sql-codegen</artifactId>
-                <version>${querydsl.version}</version>
+                <version>${querydsl.openfeign.version}</version>
                 <exclusions>
                     <exclusion>
                         <groupId>javax.validation</groupId>
@@ -370,6 +372,52 @@
                 <groupId>com.googlecode.libphonenumber</groupId>
                 <artifactId>libphonenumber</artifactId>
                 <version>${libphonenumber.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.hibernate.validator</groupId>
+                <artifactId>hibernate-validator</artifactId>
+                <version>${hibernate-validator.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <artifactId>validation-api</artifactId>
+                        <groupId>javax.validation</groupId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter</artifactId>
+                <version>${spring-boot-dependencies.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.springframework.boot</groupId>
+                        <artifactId>spring-boot-starter-logging</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>commons-logging</groupId>
+                        <artifactId>commons-logging</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-test</artifactId>
+                <version>${spring-boot-dependencies.version}</version>
+                <scope>test</scope>
+                <exclusions>
+                    <exclusion>
+                        <groupId>commons-logging</groupId>
+                        <artifactId>commons-logging</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>ch.qos.logback</groupId>
+                        <artifactId>logback-classic</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.ow2.asm</groupId>
+                        <artifactId>asm</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
         </dependencies>
     </dependencyManagement>
@@ -456,7 +504,7 @@
                 <plugin>
                     <groupId>io.github.openfeign.querydsl</groupId>
                     <artifactId>querydsl-maven-plugin</artifactId>
-                    <version>${querydsl.version}</version>
+                    <version>${querydsl.openfeign.version}</version>
                 </plugin>
 
                 <plugin>
