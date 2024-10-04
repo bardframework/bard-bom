@@ -6,13 +6,13 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-dependencies</artifactId>
-        <version>3.3.2</version>
+        <version>3.3.4</version>
         <relativePath/>
     </parent>
 
     <groupId>org.bardframework</groupId>
     <artifactId>bard-bom</artifactId>
-    <version>3.5.10</version>
+    <version>3.6.10</version>
 
     <packaging>pom</packaging>
     <name>Bard Framework BOM (Bill of Materials)</name>
@@ -20,39 +20,39 @@
 
     <properties>
         <!-- versions -->
-        <bardframework.commons.version>3.5.1</bardframework.commons.version>
-        <bardframework.crud.version>3.5.2</bardframework.crud.version>
-        <bardframework.filestore.version>3.5.3</bardframework.filestore.version>
-        <bardframework.form.version>3.5.4</bardframework.form.version>
-        <bardframework.validator.version>3.5.5</bardframework.validator.version>
-        <jalali-date.version>3.5.7</jalali-date.version>
+        <bardframework.commons.version>3.6.1</bardframework.commons.version>
+        <bardframework.crud.version>3.6.2</bardframework.crud.version>
+        <bardframework.filestore.version>3.6.3</bardframework.filestore.version>
+        <bardframework.form.version>3.6.4</bardframework.form.version>
+        <bardframework.validator.version>3.6.5</bardframework.validator.version>
+        <jalali-date.version>3.6.7</jalali-date.version>
         <!---->
         <commons-collections4.version>4.5.0-M2</commons-collections4.version>
-        <commons-io.version>2.16.1</commons-io.version>
-        <commons-rng.version>1.6</commons-rng.version>
+        <commons-io.version>2.17.0</commons-io.version>
+        <commons-rng-simple.version>1.6</commons-rng-simple.version>
         <commons-text.version>1.12.0</commons-text.version>
         <!-- Deprecated -->
-        <apm-agent-attach.version>1.51.0</apm-agent-attach.version>
+        <apm-agent-attach.version>1.52.0</apm-agent-attach.version>
         <generex.version>1.0.2</generex.version>
-        <geoip2.version>4.2.0</geoip2.version>
-        <libphonenumber.version>8.13.42</libphonenumber.version>
+        <geoip2.version>4.2.1</geoip2.version>
+        <libphonenumber.version>8.13.47</libphonenumber.version>
         <poi.version>5.3.0</poi.version>
-        <querydsl.openfeign.version>6.6</querydsl.openfeign.version>
+        <querydsl.openfeign.version>6.8</querydsl.openfeign.version>
         <querydsl.version>5.1.0</querydsl.version>
         <reflection.version>0.10.2</reflection.version>
-        <spring-boot-dependencies.version>3.3.2</spring-boot-dependencies.version>
+        <spring-boot-dependencies.version>3.3.4</spring-boot-dependencies.version>
         <spring-cloud-dependencies.version>2023.0.3</spring-cloud-dependencies.version>
         <springdoc-openapi-starter-webmvc-ui.version>2.6.0</springdoc-openapi-starter-webmvc-ui.version>
         <tika.version>3.0.0-BETA2</tika.version>
-        <yauaa.version>7.26.1</yauaa.version>
+        <yauaa.version>7.28.1</yauaa.version>
         <zxing.version>3.5.3</zxing.version>
 
         <!-- plugin versions -->
-        <dependency-check-maven.version>10.0.3</dependency-check-maven.version>
+        <dependency-check-maven.version>10.0.4</dependency-check-maven.version>
         <!-- Deprecated -->
         <dockerfile-maven-plugin.version>1.4.13</dockerfile-maven-plugin.version>
         <jacoco-maven-plugin.version>0.8.12</jacoco-maven-plugin.version>
-        <maven-gpg-plugin.version>3.2.4</maven-gpg-plugin.version>
+        <maven-gpg-plugin.version>3.2.7</maven-gpg-plugin.version>
         <maven-site-plugin.version>4.0.0-M16</maven-site-plugin.version>
         <nexus-staging-maven-plugin.vesion>1.7.0</nexus-staging-maven-plugin.vesion>
         <properties-maven-plugin.version>1.2.1</properties-maven-plugin.version>
@@ -225,6 +225,11 @@
             </dependency>
             <dependency>
                 <groupId>org.bardframework.form</groupId>
+                <artifactId>bard-flow-redis</artifactId>
+                <version>${bardframework.form.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bardframework.form</groupId>
                 <artifactId>bard-form</artifactId>
                 <version>${bardframework.form.version}</version>
             </dependency>
@@ -307,7 +312,7 @@
             <dependency>
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-rng-simple</artifactId>
-                <version>${commons-rng.version}</version>
+                <version>${commons-rng-simple.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.reflections</groupId>
