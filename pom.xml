@@ -12,7 +12,7 @@
 
     <groupId>org.bardframework</groupId>
     <artifactId>bard-bom</artifactId>
-    <version>3.7.10</version>
+    <version>3.8.10</version>
 
     <packaging>pom</packaging>
     <name>Bard Framework BOM (Bill of Materials)</name>
@@ -20,12 +20,12 @@
 
     <properties>
         <!-- versions -->
-        <bardframework.commons.version>3.7.1</bardframework.commons.version>
-        <bardframework.crud.version>3.7.2</bardframework.crud.version>
-        <bardframework.filestore.version>3.7.3</bardframework.filestore.version>
-        <bardframework.form.version>3.7.4</bardframework.form.version>
-        <bardframework.validator.version>3.7.5</bardframework.validator.version>
-        <jalali-date.version>3.7.7</jalali-date.version>
+        <bardframework.commons.version>3.8.1</bardframework.commons.version>
+        <bardframework.crud.version>3.8.2</bardframework.crud.version>
+        <bardframework.filestore.version>3.8.3</bardframework.filestore.version>
+        <bardframework.form.version>3.8.4</bardframework.form.version>
+        <bardframework.validator.version>3.8.5</bardframework.validator.version>
+        <jalali-date.version>3.8.7</jalali-date.version>
         <!---->
         <commons-collections4.version>4.5.0-M2</commons-collections4.version>
         <commons-io.version>2.18.0</commons-io.version>
@@ -41,14 +41,14 @@
         <querydsl.version>5.1.0</querydsl.version>
         <reflection.version>0.10.2</reflection.version>
         <spring-boot-dependencies.version>3.4.0</spring-boot-dependencies.version>
-        <spring-cloud-dependencies.version>2023.0.4</spring-cloud-dependencies.version>
-        <springdoc-openapi-starter-webmvc-ui.version>2.6.0</springdoc-openapi-starter-webmvc-ui.version>
+        <spring-cloud-dependencies.version>2024.0.0</spring-cloud-dependencies.version>
+        <springdoc-openapi-starter-webmvc-ui.version>2.7.0</springdoc-openapi-starter-webmvc-ui.version>
         <tika.version>3.0.0</tika.version>
         <yauaa.version>7.29.0</yauaa.version>
         <zxing.version>3.5.3</zxing.version>
 
         <!-- plugin versions -->
-        <dependency-check-maven.version>11.1.0</dependency-check-maven.version>
+        <dependency-check-maven.version>11.1.1</dependency-check-maven.version>
         <!-- Deprecated -->
         <dockerfile-maven-plugin.version>1.4.13</dockerfile-maven-plugin.version>
         <jacoco-maven-plugin.version>0.8.12</jacoco-maven-plugin.version>
