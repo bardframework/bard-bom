@@ -12,7 +12,7 @@
 
     <groupId>org.bardframework</groupId>
     <artifactId>bard-bom</artifactId>
-    <version>3.8.10</version>
+    <version>3.9.10</version>
 
     <packaging>pom</packaging>
     <name>Bard Framework BOM (Bill of Materials)</name>
@@ -20,12 +20,12 @@
 
     <properties>
         <!-- versions -->
-        <bardframework.commons.version>3.8.1</bardframework.commons.version>
-        <bardframework.crud.version>3.8.2</bardframework.crud.version>
-        <bardframework.filestore.version>3.8.3</bardframework.filestore.version>
-        <bardframework.form.version>3.8.4</bardframework.form.version>
-        <bardframework.validator.version>3.8.5</bardframework.validator.version>
-        <jalali-date.version>3.8.7</jalali-date.version>
+        <bardframework.commons.version>3.9.1</bardframework.commons.version>
+        <bardframework.crud.version>3.9.2</bardframework.crud.version>
+        <bardframework.filestore.version>3.9.3</bardframework.filestore.version>
+        <bardframework.form.version>3.9.4</bardframework.form.version>
+        <bardframework.validator.version>3.9.5</bardframework.validator.version>
+        <jalali-date.version>3.9.7</jalali-date.version>
         <!---->
         <commons-collections4.version>4.5.0-M2</commons-collections4.version>
         <commons-io.version>2.18.0</commons-io.version>
